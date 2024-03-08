@@ -1,0 +1,13 @@
+.bigbox {
+  width: 60vw;
+  height: 85vh;
+  background-color: #5d9de7 ;
+  margin: 7vh auto auto auto;
+  border-radius: 40px;
+  display: flex;
+  justify-content: end;
+  background-image: url(../../ass/backie.png);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  position: relative;
+}
