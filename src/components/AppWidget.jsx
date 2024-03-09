@@ -32,7 +32,11 @@ const AppWidget = () => {
             {Data.name ? <p> {Data.name} </p> : <p>Dallas</p>}
           </div>
           <div className={styles.temp}>
-            {Data.main ? <h1> {Math.floor(Data.main.temp - 273)}°C </h1> : <h1>60°C</h1>}
+            {Data.main ? (
+              <h1> {Math.floor(Data.main.temp - 273)}°C </h1>
+            ) : (
+              <h1>60°C</h1>
+            )}
             <div className={styles.description}>
               {Data.weather ? <p> {Data.weather[0].main} </p> : <p>Clouds</p>}
             </div>
