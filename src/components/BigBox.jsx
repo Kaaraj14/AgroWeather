@@ -6,7 +6,7 @@ import AppWidget from "./AppWidget.jsx";
 const BigBox = () => {
   return (
     <div className={styles.bigbox}>
-      <AppWidget/>
+      <AppWidget />
       <RightBox />
     </div>
   );
