@@ -1,5 +1,5 @@
 import styles from "./Header.module.css";
-import image from "../../ass/AgroWeatherLogo-removebg-preview.png";
+import image from "../../assets/AgroWeatherLogo-removebg-preview.png";
 
 const Header = () => {
   return (
