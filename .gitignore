@@ -6,3 +6,5 @@ node_modules/
 
 # Ignore compiled files
 *.log
+
+secrets.json
