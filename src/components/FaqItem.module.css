@@ -1,0 +1,66 @@
+/* FaqItem.module.css */
+.container {
+    max-width: 800px; /* Adjust the max-width as needed */
+    margin: 0 auto; /* Center the container horizontally */
+     /* Add some padding to the container */
+  }
+
+.faq-item {
+    margin-bottom: 20px;
+  }
+  
+  .question {
+    cursor: pointer;
+    font-weight: bold;
+    padding: 15px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .question:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .question-text {
+    flex: 1;
+  }
+  
+  .icon {
+    font-size: 1.2em;
+    margin-left: 10px;
+  }
+  
+  .answer {
+    display: none; /* Hide the answer section by default */
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-top: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  .answer:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+.answer.open {
+    display: block; /* Display the answer section when open */
+  }
+  
+  /* Add margin between the symbol and question text */
+  .question-text {
+    margin-left: 40px; /* Adjust as needed */
+  }
+  
+  /* Add spacing to the symbol */
+  .icon {
+    font-size: 2em;
+    margin-right: 10px; /* Adjust as needed */
+  }
+  

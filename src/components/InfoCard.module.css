@@ -1,0 +1,37 @@
+.info-card {
+    /* border: 1px solid #ccc; */
+    margin-left:30px;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    max-width: 300px;
+  }
+  .flag span{
+    font-weight: bold;
+  }
+  .flag {
+    width: 40px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .flag img {
+    padding: 0%;
+    width: 30px;
+    height: 20px;
+    margin-right: 5px;
+  }
+  
+  .address {
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+  
+  .phone {
+    display: flex;
+    align-items: center;
+  }
+  
+  .phone span {
+    margin-right: 5px;
+  }
