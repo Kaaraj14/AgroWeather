@@ -1,0 +1,39 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 2% 12% 2% 17%;
+  }
+.formBox{
+    display: flex;
+    width: 65%;
+    margin: 0 auto 100px auto;
+    box-shadow: 0 4px 60px 0 rgba(0, 0, 0, .08);
+
+}
+.bottom-container{
+    display: flex;
+    justify-content: space-between;
+    margin: 2% 12% 15% 17%;
+}
+  .content {
+    flex: 1; /* Grow to fill available space */
+  }
+  
+  .image {
+    
+    margin-left: 20px; /* Adjust spacing between content and image */
+  }
+  .image img{
+    height: 330px;
+  }
+h1{
+    font-size: 2.7rem;
+} 
+h4{
+    color: crimson;
+    margin-top: 10%;
+}
+p{
+    color:darkgray;
+    font-size: 0.9rem;
+}

@@ -1,3 +1,7 @@
+.Dashboard{
+  padding-top: 10%;
+}
+
 .bigbox {
   width: 60vw;
   height: 85vh;
@@ -10,4 +14,6 @@
   background-repeat: no-repeat;
   background-position: bottom left;
   position: relative;
+  margin-bottom: 20px;
 }
+

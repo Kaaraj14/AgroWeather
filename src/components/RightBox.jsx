@@ -2,7 +2,6 @@ import styles from "./RightBox.module.css";
 import WelcomeBack from "./WelcomeBack";
 import { useState, useEffect } from "react";
 import Row1 from "./Row1";
-import Row2 from "./Row2";
 import LineGraph from "./LineGraph";
 // import { updateSensorDataAndExport, exportSensorData } from "../backendData.js";
 // import React, { useState, useEffect } from 'react';
@@ -66,7 +65,6 @@ const RightBox = () => {
         <LineGraph Parameters={parameters}/>
       </div>
       <Row1 Parameters={parameters} />
-      <Row2 handleIncrement={handleIncrement} />
     </div>
   );
 };
