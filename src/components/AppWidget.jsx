@@ -5,7 +5,7 @@ import { AppWidgetKey } from "../../apiSecrets";
 const AppWidget = () => {
   const [Data, setData] = useState({});
   const [Location, setLocation] = useState("");
-  const key = AppWidget ;
+  const key = AppWidgetKey ;
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${Location}&appid=${key}`;
 
   const changeLocation = (event) => {
