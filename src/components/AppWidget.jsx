@@ -1,12 +1,12 @@
 import styles from "./AppWidget.module.css";
 import axios from "axios";
 import { useState } from "react";
-
+import { AppWidgetKey } from "../../apiSecrets";
 const AppWidget = () => {
   const [Data, setData] = useState({});
   const [Location, setLocation] = useState("");
-
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${Location}&appid=91802c7b2a8095d0e8809721740e8cbc`;
+  const key = AppWidget ;
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${Location}&appid=${key}`;
 
   const changeLocation = (event) => {
     if (event.key === "Enter") {
