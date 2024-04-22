@@ -19,7 +19,7 @@ const RightBox = () => {
 
   useEffect(() => {
     // Connect to MQTT broker
-    const brokerUrl = 'ws://192.168.55.201:9001';
+    const brokerUrl = 'ws://192.168.27.201:9001';
     const client = mqtt.connect(brokerUrl);
 
     client.on('connect', () => {

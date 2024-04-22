@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from "./FaqItem.module.css";
 
-const FaqItem = ({ question, answer }) => {
+const FaqItem = ({ id ,question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleCollapse = () => {
@@ -9,7 +9,7 @@ const FaqItem = ({ question, answer }) => {
   };
 
   return (
-    <div className={styles['container']}>
+    <div className={styles['container']} key={id}>
      <div className={styles['faq-item']}>
      <div className={styles['question']} onClick={toggleCollapse}>
   <span className={styles['icon']}>{isOpen ? '-' : '+'}</span>

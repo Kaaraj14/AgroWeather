@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import FaqItem from "../components/FaqItem";
 import styles from "./Faq.module.css";
+import faqData from "../Data/faqData";
 const Faq = () => {
 return (
 <>
@@ -10,9 +11,10 @@ return (
 </div>
 <div className="List" > 
 
-      <FaqItem question="Question 1" answer="Answer 1" />
-      <FaqItem question="Question 2" answer="Answer 2" />
-      <FaqItem question="Question 3" answer="Answer 3" />
+{faqData.map((item) => (
+        <FaqItem key={item.id} question={item.question} answer={item.answer} />
+      ))}
+      
     
 </div>
 </>
