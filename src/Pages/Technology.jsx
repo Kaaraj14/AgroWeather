@@ -4,7 +4,7 @@ import TechPanel from "../components/TechPanel.jsx";
 import techData from "../Data/techData.js";
 const Technology = () => {
   return (
-    <>
+    <div className={styles.techpage}>
       <Outlet />
       <div className={styles.tech}>
         <div className={styles.grid}>
@@ -19,7 +19,7 @@ const Technology = () => {
           ))}
         </div>
       </div>
-    </>
+    </div >
   );
 };
 

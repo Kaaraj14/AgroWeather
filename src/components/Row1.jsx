@@ -38,8 +38,9 @@ const Row1 = (props) => {
       <PercentageBar Percentage={{val:state.Temp,symbol: "°C",final:false,title:"Temperature"}} />
       <PercentageBar Percentage={{val:state.Hum,symbol: "%",final:false,title:"Humidity"}} />
       <PercentageBar Percentage={{val:state.AQI,symbol: "ppm",final:false,title:"AQI"}} />
-      <PercentageBar Percentage={{val:state.Pres,symbol: "Pa",final:false,title:"Pressure"}} />
+      
       <PercentageBar Percentage={{val:state.Alt,symbol: "m",final:false,title:"Altitude"}} />
+      <PercentageBar Percentage={{val:state.Pres,symbol: "hPa",final:false,title:"Pressure"}} />
       <PercentageBar Percentage={{val:state.Alt,symbol: "m",final:true,title:""}}/>
     </div>
   );

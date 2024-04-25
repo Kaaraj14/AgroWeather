@@ -34,7 +34,7 @@ const PercentageBar = (props) => {
           
         );
         
-      case "Pa":
+      case "hPa":
         return(
           <div className={styles.icon}><GiPressureCooker/></div>
           

@@ -1,0 +1,10 @@
+.CircularBars {
+  display: flex;
+  margin : 0 auto;
+align-items: center;
+  justify-content: center;
+}
+.component{
+    margin: 0;
+    text-Align: 'center';
+}
