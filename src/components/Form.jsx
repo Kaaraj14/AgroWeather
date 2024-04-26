@@ -20,7 +20,9 @@ const Form = () => {
   // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData); // Do something with the form data, e.g., send it to a server
+    console.log(formData); 
+
+    
   };
 
   return (

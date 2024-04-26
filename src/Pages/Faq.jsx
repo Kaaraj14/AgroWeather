@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import FaqItem from "../components/FaqItem";
 import styles from "./Faq.module.css";
 import faqData from "../Data/faqData";
+import DynamicContent from "../components/DynamicContent.jsx";
 const Faq = () => {
 return (
 <>
@@ -15,7 +16,7 @@ return (
         <FaqItem key={item.id} question={item.question} answer={item.answer} />
       ))}
       
-    
+
 </div>
 </>
 

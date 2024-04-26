@@ -6,6 +6,7 @@ import LineGraph from "./LineGraph";
 // import { updateSensorDataAndExport, exportSensorData } from "../backendData.js";
 // import React, { useState, useEffect } from 'react';
 import mqtt from 'mqtt'; // Assuming you have the MQTT library installed
+import DynamicContent from "./DynamicContent";
 
 const RightBox = () => {
   // Initialize sensor data with default or retrieved values
@@ -19,7 +20,7 @@ const RightBox = () => {
 
   useEffect(() => {
     // Connect to MQTT broker
-    const brokerUrl = 'ws://192.168.27.201:9001';
+    const brokerUrl = 'ws://192.168.239.201:9001';
     const client = mqtt.connect(brokerUrl);
 
     client.on('connect', () => {
@@ -59,13 +60,15 @@ const RightBox = () => {
   };
 
   return (
+    <>
     <div className={styles.rightbox}>
       <WelcomeBack />
       <div className={styles.graph}>
-        <LineGraph Parameters={parameters}/>
+       <DynamicContent parameters ={parameters} /> 
       </div>
       <Row1 Parameters={parameters} />
     </div>
+    </>
   );
 };
 

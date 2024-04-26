@@ -20,42 +20,34 @@ const Time = () => {
   return `${hour}-${minute}-${second}`;
 };
 
-const LineGraph = (props) => {
+const LineGraph = ({ temperatureValue }) => {
   const [dataSet, setDataset] = useState([0]);
   const labels = useRef([0]);
-  const temperature=props.temperatureValue;
-
+  // console.log(temperatureValue);
   useEffect(() => {
-    console.log(props);
-    const temperature= props.Parameters.temperature;
-    console.log(props.Parameters.temperature);
     const interval = setInterval(() => {
-
       if (labels.current.length > 10) {
-        const newLabels = labels.current.slice(1, dataSet.length);
-        const newLabel = Math.floor(Math.random() * 1000);
-        labels.current.value = [...newLabels, newLabel];
+        const newLabels = labels.current.slice(1);
+        const newLabel = Time();
+        labels.current = [...newLabels, newLabel];
       } else {
         labels.current = [...labels.current, Time()];
       }
+
       setDataset((dataSet) => {
         if (dataSet.length > 10) {
-          const newDataSet = dataSet.slice(1, dataSet.length);
-          const newValue = Math.floor(Math.random() * 1000);
-          return [...newDataSet, temperature];
+          const newDataSet = dataSet.slice(1);
+          return [...newDataSet, temperatureValue];
         } else {
-          const newValue = Math.floor(Math.random() * 1000);
-          return [...dataSet, temperature];
-
+          return [...dataSet, temperatureValue];
         }
       });
-      
     }, 10000);
+
     return () => {
       clearInterval(interval);
     };
-  }, [props]);
-
+  }, [temperatureValue]);
 
   const data = {
     labels: labels.current,
@@ -76,11 +68,8 @@ const LineGraph = (props) => {
       },
     ],
   };
-  return (
-    <>
-      <Line data={data}></Line>
-    </>
-  );
+
+  return <Line data={data} />;
 };
 
 export default LineGraph;
