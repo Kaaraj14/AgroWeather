@@ -44,6 +44,9 @@
   .icontent{
     width:70%;
   }
+  .teams h2{
+    color :orangered;
+  }
   .af{
     margin :20% auto 0 auto; 
     width :75%;

@@ -21,6 +21,13 @@ const Form = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData); 
+    setFormData({
+      Name: "",
+      ContactNo: "",
+      email: "",
+      Subject: "",
+      Message: ""
+    })
     
 
   };

@@ -62,7 +62,7 @@ const AboutUs = () => {
         </div>
       </div>
       <div className={styles.teams}>
-        <h4>Our Team:</h4>
+        <h2>Our Team:</h2>
       </div>
 
       <div className={styles.teams}>
