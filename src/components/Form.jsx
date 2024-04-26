@@ -21,8 +21,8 @@ const Form = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData); 
-
     
+
   };
 
   return (
@@ -30,7 +30,7 @@ const Form = () => {
     <form onSubmit={handleSubmit} className={styles["form-container"]}>
       <div className={styles["inner-container"]}>
         <div className={styles["form-group"]}>
-          <label htmlFor="Name">First Name:</label>
+          <label htmlFor="Name"> Name:</label>
           <input
             type="text"
             id="Name"
