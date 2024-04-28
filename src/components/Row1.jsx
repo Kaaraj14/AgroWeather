@@ -13,7 +13,7 @@ const Row1 = (props) => {
   ) => {
     console.log(action);
     console.log(String(action.temperature));
-    return {  Temp: action.temperature ,Hum: action.humidity, AQI: action.air_quality, Pres: action.pressure*100, Alt: action.altitude};
+    return {  Temp: action.temperature ,Hum: action.humidity, AQI: action.air_quality, Pres: action.pressure, Alt: action.altitude};
   };
 
   useEffect(() => {

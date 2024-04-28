@@ -1,10 +1,17 @@
 .CircularBars {
   display: flex;
-  margin : 0 auto;
-align-items: center;
+  margin: 0 auto;
+  align-items: center;
   justify-content: center;
 }
-.component{
-    margin: 0;
-    text-Align: 'center';
+.CircleContainer {
+  width: 200px;
+  height: 200px;
+  margin: 0 20px;
+}
+
+.component {
+  width: 200px;
+  margin: auto;
+  text-align: "center";
 }

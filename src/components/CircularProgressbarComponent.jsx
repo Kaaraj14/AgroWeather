@@ -28,28 +28,25 @@ function symbol(value) {
 }
 
 const CircularProgressBarComponent = ({ data }) => {
-  // Destructure data into titles, values, and maxvalues
   const [titles, values, maxvalues] = data;
 
-  // Function to render circular progress bars for each data point
   const renderProgressBars = () => {
     return titles.map((title, index) => {
-      // Parse value to float (for progress) and string (for display)
       const value = parseFloat(values[index]).toFixed(2);
       const parsedMaxValue = parseFloat(maxvalues[index]);
 
-      // **Corrected formatting for text prop:**
-      const displayValue = `${value}${symbol(title)}`; // Combine value and symbol directly
+      const displayValue = `${value}${symbol(title)}`;
 
       return (
         <div key={index} className={styles["Component"]}>
           <h2>{title}</h2>
-          <CircularProgressbar
-            value={value}
-            maxValue={parsedMaxValue} // Assuming all values are percentages
-            text={displayValue}
-            
-          />
+          <div className={styles["CircleContainer"]}>
+            <CircularProgressbar
+              value={value}
+              maxValue={parsedMaxValue}
+              text={displayValue}
+            />
+          </div>
         </div>
       );
     });
