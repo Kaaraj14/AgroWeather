@@ -1,76 +1,49 @@
+import React from 'react';
 import styles from "./PercentageBar.module.css";
 import { CiCirclePlus } from "react-icons/ci";
-import { FaWind } from "react-icons/fa";
-import { FaMountain } from "react-icons/fa6";
-import { FaTemperatureHigh } from "react-icons/fa";
+import { FaWind, FaMountain, FaTemperatureHigh } from "react-icons/fa";
 import { WiHumidity } from "react-icons/wi";
 import { GiPressureCooker } from "react-icons/gi";
 
-//,WiHumidity,FaWind,FaWind,FaMountain,FaTemperatureHigh
-
 const PercentageBar = (props) => {
-  //Here I need to add a state value using useReducer to the div with
-  //number class
-  
-  const icon = ()=>{
-    switch(props.Percentage.symbol) {
+  const icon = () => {
+    switch (props.Percentage.symbol) {
       case "°C":
-        return(
-          <div className={styles.icon}>
-          <FaTemperatureHigh/>
-          </div>
-        );
-        
+        return <FaTemperatureHigh className={styles.icon} />;
       case "%":
-        return(
-          <div className={styles.icon}>
-          <WiHumidity/>
-          </div> 
-        );
-        
+        return <WiHumidity className={styles.icon} />;
       case "ppm":
-        return(
-          <div className={styles.icon}><FaWind/></div>
-          
-        );
-        
+        return <FaWind className={styles.icon} />;
       case "hPa":
-        return(
-          <div className={styles.icon}><GiPressureCooker/></div>
-          
-        );
-        
+        return <GiPressureCooker className={styles.icon} />;
       case "m":
-        return(
-          <div className={styles.icon}><FaMountain/></div>
-          
-        );
-        
+        return <FaMountain className={styles.icon} />;
       default:
-        // code block
+        return null;
     }
   }
 
-  if(props.Percentage.final == true)
-  {
-    return(
-    <div className={styles.percentage}>
-      <CiCirclePlus size={35}/>
-    </div>
-  );
-  }
-  else{
-  return (
-    <div className={styles.percentage}>
-      {icon()}
-      <div className={styles.title}>{props.Percentage.title}</div>
-      <div className={styles.number}>{props.Percentage.val}{props.Percentage.symbol}</div>
-      <div className={styles.percentage_bar}>
-        <div className={styles.percent}></div>
+  if (props.Percentage.final) {
+    return (
+      <div className={styles.percentage}>
+        <CiCirclePlus size={35} />
       </div>
-    </div>
-  );
-}
+    );
+  } else {
+    return (
+      <div className={styles.percentage}>
+        {icon()}
+        <div className={styles.title}>{props.Percentage.title}</div>
+        <div className={styles.number}>{props.Percentage.val}{props.Percentage.symbol}</div>
+        <div className={styles.percentage_bar}>
+          <div
+            className={styles.percent}
+            style={{ width: `${(props.Percentage.val / props.Percentage.maxValue) * 100}%` }}
+          ></div>
+        </div>
+      </div>
+    );
+  }
 };
 
 export default PercentageBar;

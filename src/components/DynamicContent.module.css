@@ -10,7 +10,8 @@ body {
   }
   
   .headings {
-    flex: 1; /* Take 50% width of container */
+    width:150px;
+    /* flex: 1; Take 50% width of container */
     padding: 20px;
   }
   

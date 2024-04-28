@@ -28,19 +28,19 @@ const Row1 = (props) => {
     Alt: 0,
   });
 
-  const TempratureProps = {
-    val:state.Temp,symbol: "%"
-  }
+  // const TempratureProps = {
+  //   val:state.Temp,symbol: "%"
+  // }
 
 
   return (
     <div className={styles.row1}>
-      <PercentageBar Percentage={{val:state.Temp,symbol: "°C",final:false,title:"Temperature"}} />
-      <PercentageBar Percentage={{val:state.Hum,symbol: "%",final:false,title:"Humidity"}} />
-      <PercentageBar Percentage={{val:state.AQI,symbol: "ppm",final:false,title:"AQI"}} />
+      <PercentageBar Percentage={{val:state.Temp,symbol: "°C",final:false,title:"Temperature",maxvalue:80}} />
+      <PercentageBar Percentage={{val:state.Hum,symbol: "%",final:false,title:"Humidity",maxvalue:100}} />
+      <PercentageBar Percentage={{val:state.AQI,symbol: "ppm",final:false,title:"AQI",maxvalue:1023}} />
       
-      <PercentageBar Percentage={{val:state.Alt,symbol: "m",final:false,title:"Altitude"}} />
-      <PercentageBar Percentage={{val:state.Pres,symbol: "hPa",final:false,title:"Pressure"}} />
+      <PercentageBar Percentage={{val:state.Alt,symbol: "m",final:false,title:"Altitude",maxvalue:9000}} />
+      <PercentageBar Percentage={{val:state.Pres,symbol: "hPa",final:false,title:"Pressure",maxvalue:1100}} />
       <PercentageBar Percentage={{val:state.Alt,symbol: "m",final:true,title:""}}/>
     </div>
   );
