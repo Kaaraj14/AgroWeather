@@ -3,14 +3,14 @@ import worker from "../../assets/worker.png";
 const teamData = [
     {
       id: 1,
-      name: "kaaraj Wadhwa",
+      name: "Kaaraj Wadhwa",
       position: "Team  Lead",
       bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget ultricies neque.",
       imageUrl: worker,
     },
     {
       id: 2,
-      name: "Shresth Sharma",
+      name: "Shreshth Sharma",
       position: "Web- Developer",
       bio: "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
       imageUrl: worker,
