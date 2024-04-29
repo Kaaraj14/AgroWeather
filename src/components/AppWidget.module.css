@@ -71,12 +71,10 @@ p {
 }
 
 .input {
-  position: absolute;
+  position: inherit;
   border-radius: 15px;
   top: 10%;
   left: 10%;
-  width: 0%;
-  height: 10%;
   border: white 1px solid;
   outline: none;
   padding-left: 5px;

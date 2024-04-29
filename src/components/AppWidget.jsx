@@ -27,7 +27,7 @@ const AppWidget = () => {
             className={styles.input}
             onChange={(e) => setLocation(e.target.value)}
             onKeyDown={changeLocation}
-           style={{ width: "220px" }}
+           style={{ width: "100%" }}
           />
           <div className={styles.location}>
             {Data.name ? <p> {Data.name} </p> : <p>Dallas</p>}
