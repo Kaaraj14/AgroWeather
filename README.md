@@ -23,10 +23,14 @@ AgroWeather is a web application designed to provide farmers and agricultural pr
    ```sh
    git clone https://github.com/Kaaraj14/AgroWeather.git
 2. Navigate to the project directory:
-   cd .\sandbox\
+   ```sh
+    cd .\sandbox\
 3. Install all dependencies
-   npm install
+   ```sh
+    npm install
 4. Install React-icons manually , (some issue with that lib)
-   npm install React-icons --save
+   ```sh
+    npm install React-icons --save
 5. Run the project and head over to localHost:5173
-   npm run dev 
+    ```sh
+    npm run dev 
