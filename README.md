@@ -13,7 +13,7 @@ AgroWeather is a web application designed to provide farmers and agricultural pr
 ## Technologies Used
 
 - **Frontend**: React.js, Chart.js
-- **Backend**: Node.js
+- **Backend**: Node.js ,Node-red 
 - **External APIs**: OpenWeatherMap API, GoogleSheets API
 - **Data Analysis**: Basic GoogleSheet Operations (POV : No Data analyst in team, well)
 
