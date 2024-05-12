@@ -45,6 +45,12 @@ const CircularProgressBarComponent = ({ data }) => {
               value={value}
               maxValue={parsedMaxValue}
               text={displayValue}
+              styles={{ text: {
+                // Text color
+                // fill: 'light-green',
+                
+                fontSize: '13px',
+              }}}
             />
           </div>
         </div>

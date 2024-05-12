@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import styles from "./PercentageBar.module.css";
 import { CiCirclePlus } from "react-icons/ci";
 import { FaWind, FaMountain, FaTemperatureHigh } from "react-icons/fa";
@@ -21,7 +21,7 @@ const PercentageBar = (props) => {
       default:
         return null;
     }
-  }
+  };
 
   if (props.Percentage.final) {
     return (
@@ -34,12 +34,19 @@ const PercentageBar = (props) => {
       <div className={styles.percentage}>
         {icon()}
         <div className={styles.title}>{props.Percentage.title}</div>
-        <div className={styles.number}>{props.Percentage.val}{props.Percentage.symbol}</div>
+        <div className={styles.number}>
+          {props.Percentage.val}
+          {props.Percentage.symbol}
+        </div>
         <div className={styles.percentage_bar}>
-          <div
-            className={styles.percent}
-            style={{ width: `${(props.Percentage.val / props.Percentage.maxValue) * 100}%` }}
-          ></div>
+          {props.Percentage.val ? (
+            <progress
+              value={props.Percentage.val}
+              max={props.Percentage.maxvalue}
+            />
+          ) : (
+            <progress value={null} />
+          )}
         </div>
       </div>
     );
