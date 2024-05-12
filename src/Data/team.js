@@ -5,14 +5,14 @@ const teamData = [
       id: 1,
       name: "Kaaraj Wadhwa",
       position: "Team  Lead",
-      bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget ultricies neque.",
+      bio: "Final Year Engineering student at Maharaja Agrasen Institute Of Technology . Major : Information Teachnology and Engineering",
       imageUrl: worker,
     },
     {
       id: 2,
       name: "Shreshth Sharma",
       position: "Web- Developer",
-      bio: "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
+      bio: "Third year Engineering student at Maharaja Agrasen Institute Of Technology . Major : Computer Science And Technology",
       imageUrl: worker,
     }
     // Add more team members as needed
