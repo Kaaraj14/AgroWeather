@@ -11,16 +11,16 @@ import DynamicContent from "./DynamicContent";
 const RightBox = () => {
   // Initialize sensor data with default or retrieved values
   const [parameters, setParameters] = useState({
-    pressureValue: 50,
-    altitudeValue: 0,
-    humidityValue: 0,
-    temperatureValue: 0,
+    pressureValue: 763.6, // these are most common values
+    altitudeValue: 217,
+    humidityValue: 38,
+    temperatureValue: 28.8,
     airQualityValue: 0,
   });
 
   useEffect(() => {
     // Connect to MQTT broker
-    const brokerUrl = 'ws://192.168.239.201:9001';
+    const brokerUrl = 'ws://192.168.158.201:9001';
     const client = mqtt.connect(brokerUrl);
 
     client.on('connect', () => {
