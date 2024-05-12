@@ -36,7 +36,7 @@ const AppWidget = () => {
             {Data.main ? (
               <h1> {Math.floor(Data.main.temp - 273)}°C </h1>
             ) : (
-              <h1>60°C</h1>
+              <h1>20°C</h1>
             )}
             <div className={styles.description}>
               {Data.weather ? <p> {Data.weather[0].main} </p> : <p>Clouds</p>}
@@ -45,15 +45,27 @@ const AppWidget = () => {
         </div>
         <div className={styles.bottom}>
           <div className={styles.feels}>
-            <p>65°F</p>
+          {Data.main ? (
+              <p> {Math.floor(Data.main.temp - 273)}°C </p>
+            ) : (
+              <p>20°C</p>
+            )}
             <p>Feels Like</p>
           </div>
           <div className={styles.humidity}>
-            <p>20%</p>
+          {Data.main ? (
+              <p> {Math.floor(Data.main.humidity)}% </p>
+            ) : (
+              <p>20%</p>
+            )}
             <p>Humidity</p>
           </div>
           <div className={styles.wind}>
-            <p>13mph</p>
+          {Data.main ? (
+              <p> {(Data.wind.speed)}mph </p>
+            ) : (
+              <p>13mph</p>
+            )}
             <p>Wind Speed</p>
           </div>
         </div>
