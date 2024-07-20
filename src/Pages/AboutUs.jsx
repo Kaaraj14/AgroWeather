@@ -15,7 +15,7 @@ const AboutUs = () => {
             AgroWeather does just that! It uses tiny sensors, like affordable
             Arduino devices, to measure Physical Parameters.
           </p>
-          <button>AgroWeather</button>
+          <button>Contact Us</button>
         </div>
         <img
           className={styles.img}
